@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            color: #333;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        main {
+            flex: 1;
+            max-width: 1200px;
+            width: 100%;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .productos-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .producto-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .producto-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .producto-imagen {
+            width: 100%;
+            height: 300px;
+            object-fit: contain;
+            background-color: #f0f0f0;
+        }
+
+        .producto-info {
+            padding: 1.5rem;
+        }
+
+        .producto-info h2 {
+            color: #333;
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .producto-info p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .producto-precio {
+            color: #667eea;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .btn-comprar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 0.875rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-comprar:hover {
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        footer {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 1.5rem;
+            text-align: center;
+            color: #666;
+            margin-top: auto;
+        }
+
+        @media (max-width: 768px) {
+            .productos-grid {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .producto-imagen {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Catálogo de Productos</h1>
+    </header>
+
+    <main>
+        <div class="productos-grid">
+            <div class="producto-card">
+                <img src="https://lh3.googleusercontent.com/d/1ICt5UMeczeSvXWwAHG3OCCzORc1AMFkT" alt="Filete de Salmón Ahumado" class="producto-imagen">
+                <div class="producto-info">
+                    <h2>Filete de Salmón Ahumado</h2>
+                    <p>Exquisito filete de salmón ahumado, ideal para tablas y aperitivos.</p>
+                    <div class="producto-precio">$22.000 CLP / 900gr - 1kg</div>
+                    <a href="https://wa.me/56997799871?text=Hola,%20me%20interesa%20el%20Filete%20de%20Salmón%20Ahumado" class="btn-comprar" target="_blank">Comprar</a>
+                </div>
+            </div>
+
+            <div class="producto-card">
+                <img src="https://lh3.googleusercontent.com/d/1_bQocgtIo9celQ3_PskPXylTkvI_k5o0" alt="Carne de Centolla" class="producto-imagen">
+                <div class="producto-info">
+                    <h2>Carne de Centolla</h2>
+                    <p>Carne de centolla fresca y natural, lista para tus mejores preparaciones.</p>
+                    <div class="producto-precio">
+                        1 kg: $25.000 CLP<br>
+                        500gr: $13.000 CLP
+                    </div>
+                    <a href="https://wa.me/56997799871?text=Hola,%20me%20interesa%20la%20Carne%20de%20Centolla" class="btn-comprar" target="_blank">Comprar</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Productos de Chiloé</p>
+    </footer>
+</body>
+</html>
